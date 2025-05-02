@@ -19,7 +19,10 @@ export default function TodoInput(props) {
             <Button
                 sx={{ margin: '10px' }}
                 variant="contained"
-                onClick={() => handleAddTodo(todoValue)}>
+                onClick={() => {
+                    handleAddTodo(todoValue);
+                    setTodoValue('');
+                }}>
                 Add
             </Button>
         </div>
